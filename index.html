@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Fashion Brand</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Reset default margin and padding */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #fullscreen-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .navbar-brand i {
+      margin-right: 5px;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-link {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-link i {
+      margin-right: 5px;
+    }
+
+    .navbar-link:hover {
+      background-color: #555;
+    }
+
+    /* White background text box */
+    .textbox {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      margin-top: 10px;
+      width: 100%;
+      min-height: calc(100vh - 40px);
+      position: fixed;
+      top: 40px;
+      left: 0;
+      z-index: 999;
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    /* Picture hover effect */
+    .picture-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #333;
+    }
+
+    .picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .picture-container:hover img {
+      opacity: 0.7;
+    }
+
+    .picture-container:hover .picture-overlay {
+      display: block;
+    }
+
+    .picture-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      display: none;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .picture-overlay p {
+      font-size: 14px;
+      margin: 0;
+      padding: 5px;
+    }
+
+    /* Image gallery */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Transparent buttons */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .transparent-button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      margin: 0 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .transparent-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .transparent-button.login-button:hover {
+      background-color: rgba(208, 165, 112, 0.8);
+    }
+
+    .transparent-button.signup-button:hover {
+      background-color: rgba(208, 165, 112, 0.8);
+    }
+    .zoom-text {
+      position: absolute;
+    
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      opacity: 1;
+      transition: transform 0.3s, color 0.3s;
+      text-align: center;
+    }
+
+    .zoom-text:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      color: #000000;
+    }
+
+
+  </style>
+</head>
+<body>
+  <center>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-gem"></i> Verena Elegante
+      </div>
+      <div class="navbar-links">
+        <a href="#" class="navbar-link"><i class="fas fa-home"></i> Home</a>
+        <a href="#" class="navbar-link"><i class="fas fa-tshirt"></i> Products</a>
+        <a href="#" class="navbar-link"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#" class="navbar-link"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </nav>
+
+    <div class="textbox">
+      <h1>Welcome to our Sustainable Fashion Brand -</h1>
+      <div class="zoom-text">“𝙑𝙚𝙣𝙚𝙧𝙖 𝙀𝙡𝙚𝙜𝙖𝙣𝙩𝙚”, Where Ethics and Fashion Unite</div> <br> <br>
+      <div class="image-gallery">
+        <div class="picture-container">
+          <img src="ethical.jpeg" alt="Image 1">
+          <div class="picture-overlay">
+            <p>Description for Image 1</p>
+          </div>
+        </div>
+
+        <div class="picture-container">
+          <img src="fashion.png" alt="Image 2">
+          <div class="picture-overlay">
+            <p>Description for Image 2</p>
+          </div>
+        </div>
+        <div class="picture-container">
+          <img src="image.jpeg" alt="Image 3">
+          <div class="picture-overlay">
+            <p>Description for Image 3</p>
+          </div>
+        </div>
+      </div>
+      <h3>
+       
+Welcome to our sustainable and ethical fashion web template, designed <br> specifically for brands who prioritize fair trade, eco-friendly <br> materials, and responsible manufacturing. With its clean and modern <br> design, our template allows you to showcase your brand's commitment to <br> sustainability and ethics. From highlighting fair trade practices and eco-friendly<br>  materials to emphasizing responsible manufacturing and community engagement,<br>  this template enables you to create an engaging online presence<br>  that resonates with conscious consumers, ultimately promoting a positive<br>  impact on the fashion industry and the environment.
+        </h3>
+      <div class="button-container">
+        <button class="transparent-button login-button">Login</button>
+        <button class="transparent-button signup-button">Sign Up</button>
+      </div>
+    </div>
+
+    <video id="fullscreen-video" src="fashion.mp4" type="video/mp4" autoplay muted loop></video>
+  </center>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Fashion Brand</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Reset default margin and padding */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #fullscreen-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Navbar styles */
+    .navbar {
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .navbar-brand i {
+      margin-right: 5px;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-link {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-link i {
+      margin-right: 5px;
+    }
+
+    .navbar-link:hover {
+      background-color: #555;
+    }
+
+    /* White background text box */
+    .textbox {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 20px;
+      margin-top: 10px;
+      width: 100%;
+      min-height: calc(100vh - 40px);
+      position: fixed;
+      top: 40px;
+      left: 0;
+      z-index: 999;
+      overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    /* Picture hover effect */
+    .picture-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #333;
+    }
+
+    .picture-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .picture-container:hover img {
+      opacity: 0.7;
+    }
+
+    .picture-container:hover .picture-overlay {
+      display: block;
+    }
+
+    .picture-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      display: none;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .picture-overlay p {
+      font-size: 14px;
+      margin: 0;
+      padding: 5px;
+    }
+
+    /* Image gallery */
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Transparent buttons */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .transparent-button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      margin: 0 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .transparent-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .transparent-button.login-button:hover {
+      background-color: rgba(208, 165, 112, 0.8);
+    }
+
+    .transparent-button.signup-button:hover {
+      background-color: rgba(208, 165, 112, 0.8);
+    }
+    .zoom-text {
+      position: absolute;
+    
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      opacity: 1;
+      transition: transform 0.3s, color 0.3s;
+      text-align: center;
+    }
+
+    .zoom-text:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      color: #000000;
+    }
+
+
+  </style>
+</head>
+<body>
+  <center>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <i class="fas fa-gem"></i> Verena Elegante
+      </div>
+      <div class="navbar-links">
+        <a href="#" class="navbar-link"><i class="fas fa-home"></i> Home</a>
+        <a href="#" class="navbar-link"><i class="fas fa-tshirt"></i> Products</a>
+        <a href="#" class="navbar-link"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#" class="navbar-link"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </nav>
+
+    <div class="textbox">
+      <h1>Welcome to our Sustainable Fashion Brand -</h1>
+      <div class="zoom-text">“𝙑𝙚𝙣𝙚𝙧𝙖 𝙀𝙡𝙚𝙜𝙖𝙣𝙩𝙚”, Where Ethics and Fashion Unite</div> <br> <br>
+      <div class="image-gallery">
+        <div class="picture-container">
+          <img src="ethical.jpeg" alt="Image 1">
+          <div class="picture-overlay">
+            <p>Description for Image 1</p>
+          </div>
+        </div>
+
+        <div class="picture-container">
+          <img src="fashion.png" alt="Image 2">
+          <div class="picture-overlay">
+            <p>Description for Image 2</p>
+          </div>
+        </div>
+        <div class="picture-container">
+          <img src="image.jpeg" alt="Image 3">
+          <div class="picture-overlay">
+            <p>Description for Image 3</p>
+          </div>
+        </div>
+      </div>
+      <h3>
+       
+Welcome to our sustainable and ethical fashion web template, designed <br> specifically for brands who prioritize fair trade, eco-friendly <br> materials, and responsible manufacturing. With its clean and modern <br> design, our template allows you to showcase your brand's commitment to <br> sustainability and ethics. From highlighting fair trade practices and eco-friendly<br>  materials to emphasizing responsible manufacturing and community engagement,<br>  this template enables you to create an engaging online presence<br>  that resonates with conscious consumers, ultimately promoting a positive<br>  impact on the fashion industry and the environment.
+        </h3>
+      <div class="button-container">
+        <button class="transparent-button login-button">Login</button>
+        <button class="transparent-button signup-button">Sign Up</button>
+      </div>
+    </div>
+
+    <video id="fullscreen-video" src="fashion.mp4" type="video/mp4" autoplay muted loop></video>
+  </center>
+</body>
+</html>
